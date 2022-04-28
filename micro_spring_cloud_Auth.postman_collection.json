@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "a381ac39-65ff-47bc-a5fc-d13bb6cd5a37",
+		"name": "micro_spring_cloud_Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Courses API",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "FA48-EF0C-427E-8CCF",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "gatewaykey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/course-service/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"course-service",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student API calling course-service",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "343C-ED0B-4137-B27E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "gatewaykey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/course-service/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"course-service",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Student API Calling student-service",
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "343C-ED0B-4137-B27E",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "gatewaykey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student-service/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student-service",
+						"students"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
